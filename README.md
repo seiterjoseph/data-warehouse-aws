@@ -49,7 +49,7 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
 
 ### Data Model
 
-The database is designed using a **star schema** consisting of fact and dimension tables. There is one fact table (**songplays**) containing all the metrics associated with each event user's actions, and four dimensions tables, containing associated information such as **users, songs, artists** and **time**. This model enables us to get value out of the data faster and easier since we don't need complex joins when querying data. 
+The database is designed using a **star schema** consisting of fact and dimension tables. There is one fact table (**songplays**) containing all the metrics associated with each event user's actions, and four dimensions tables, containing associated information such as **users, songs, artists** and **time**. This model enables us to get value out of the data faster and easier since we don't need complex joins when querying data.
 
 
 ## ETL pipeline
@@ -107,7 +107,7 @@ Follow the steps to extract and load the data into the data model.
 #### Example Query Results
 
 
-1. `sql SELECT * FROM songplays LIMIT 5;`
+1. `sql SELECT * FROM songplays`
 
  ![songplay1](./images/songplay1.png)
 
