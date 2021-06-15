@@ -37,9 +37,9 @@ staging_events_table_create= ("""
         sessionId           INTEGER,
         song                VARCHAR,
         status              INTEGER,
-        ts                  TIMESTAMP,
+        ts                  BIGINT,
         userAgent           VARCHAR,
-        userId              INTEGER 
+        userId              INTEGER
     )
 """)
 
@@ -129,7 +129,7 @@ staging_songs_copy = ("""
     COPY staging_songs FROM {}
     CREDENTIALS 'aws_iam_role={}'
     COMPUPDATE OFF region 'us-west-2'
-    FORMAT AS JSON 'auto' 
+    FORMAT AS JSON 'auto'
     TRUNCATECOLUMNS BLANKSASNULL EMPTYASNULL;
 """).format(SONG_DATA, IAM_ROLE)
 
